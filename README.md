@@ -4,14 +4,14 @@ API keys exported from personal .env file to keys.js file
  
 ## Technology
 Javascript (ES6) 
-Node.js (twitter, spotifym and request NPM modules)
+Node.js (twitter, spotify and request NPM modules)
 ## Functionality
 Command Line Interface program that accepts parameters used to subsequently query API's
 
 _After Supplying personal API keys and setting in .env file_
  
 **Each command recieves a JSON object from the API and then displays selected information from it** 
-
+ 
 node liri 'my-tweets' command will query the Twitter API to display the user's last 20 tweets and when they were created 
 
 node liri spotify-this-song '<songname>'  queries the spotify API. This will display: 
