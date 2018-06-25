@@ -28,7 +28,7 @@ for (let i = 3; i < argumentsProvided.length; i++) {
 	totalRequest.push(argumentsProvided[i]); 
 }
 let queryRequest = totalRequest.join(" "); 
-
+ 
 
 // Query Twitter function
 function retrieveTweets() {
@@ -40,20 +40,20 @@ function retrieveTweets() {
 
 	// Get request for amount of tweets specified by tweetAmount
 	client.get('statuses/user_timeline', tweetAmount, (err, tweets) => {
-		if (err) return console.log(err);
+		if (err) return console.log(err); 
 
 		// Array used to log query
 		let twitterInfo = [];
 
-		console.log("The Last 20 tweets");
+		console.log(`The Last 20 tweets \n`); 
 		
 		//For loop because retrieving multiple objects from API and want to display number
 		for(var i = 0; i < tweets.length; i++)  {
 			console.log(`User: ${tweets[i].user.name}`);
-			console.log(`Tweet # ${i + 1} : ${tweets[i].text}`);
+			console.log(`Tweet #${i + 1} : ${tweets[i].text}`);
 			console.log(`Timestamp: ${tweets[i].created_at}\n`);
 			//push tweet into the array
-			twitterInfo.push(`\n${tweets[i].user.name} , ${tweets[i].text} , ${tweets[i].created_at}`); 
+			twitterInfo.push(`\n${tweets[i].user.name}, ${tweets[i].text}, ${tweets[i].created_at}`); 
 		}
 
 		//Add the file to the 'log.txt' file
@@ -63,19 +63,19 @@ function retrieveTweets() {
 	}); 
 } 
 
+
 //Query Spotify function
 function querySpotify(query) { 
 	// Preset query if no argument provided
 	if (!query) query = 'The Sign Ace of Base';
 
+	//Search the spotify API for 1 song based on argument provided
 	spotify.search({ type: 'track', query: query, limit: 1 }, (err, data) => {
-		if (err) {
-			return console.log(': ' + err);
-		} 
+		if (err) return console.log(err);
 
 		//song data from the API
 		let song = data.tracks.items[0];
-		
+		 
 		//array for all the artists. Allows for logging more than one
 		let loggedArtists = []; 
 
@@ -83,7 +83,7 @@ function querySpotify(query) {
 		
 		// control for multiple artists
 		for (var i = 0; i < song.artists.length; i++) {
-			loggedArtists.push(`${song.artists[i].name}`)
+			loggedArtists.push(` ${song.artists[i].name}`)
 			if (i === 0) {
 				console.log(`Artist(s): ${song.artists[i].name}`);
 			} else { 
@@ -104,13 +104,15 @@ function querySpotify(query) {
 
 //Query OMBD function, using 'request' package
 function queryOMDB(query) {
-
+ 
 	// Preset query if one is not provided
 	if (!query) query = 'Mr. Nobody';
 
+	//Use request module to query OMBD API
 	Request(`http://www.omdbapi.com/?t=${query}&y=&plot=short&apikey=trilogy`, (error, response, body) => {
 
 		if (response.statusCode === 200 && !error) {
+			//parse the whole response
 			let movie = JSON.parse(body);
 			
 			console.log(`Title: ${movie.Title}`);
@@ -161,7 +163,7 @@ fs.appendFile('log.txt', '\n\n#' + queriedAPI + '\n\n', (err) => {
 	if (err) return console.log(err)
 }); 
 
-
+ 
 // handle the query and run appropriate function. Controls for no argument provided
 switch (queriedAPI) {
 	case 'my-tweets':
@@ -178,4 +180,4 @@ switch (queriedAPI) {
 		break;
 	default:
 		console.log('Please Enter a proper command');
-} 
+}   

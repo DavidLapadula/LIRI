@@ -29,8 +29,8 @@ node liri movie-this '<movie-name>'  queries the OMDB API. This will display
 * Language the movie was made in
 * Plot summary 
 * Actors featured in the movie
- 
-##Additions
+  
+## Additions 
 * node liri 'do-what-it-says' will read the eponymous file and perform whatever function is set in it.  
 * Allows for multiple word queries
 * Error checking for empty/incorrect commands have been added in
@@ -39,4 +39,4 @@ node liri movie-this '<movie-name>'  queries the OMDB API. This will display
 
 
 
-
+ 
