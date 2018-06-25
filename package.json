@@ -1,11 +1,11 @@
 {
-  "name": "Week10-liriNode",
+  "name": "liri-node-app",
   "version": "1.0.0",
   "description": "Week-10-Assignment",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  }, 
+  },  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/DavidLapadula/liri-node-app.git"
