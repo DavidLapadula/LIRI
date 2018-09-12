@@ -155,7 +155,7 @@ function readTxtFile() {
 			default:
 				console.log('Improper Request');
 		}
-	});
+	}); 
 }
 
 // Append the query type to the log.txt file after every query and add spaces
@@ -167,7 +167,7 @@ fs.appendFile('log.txt', '\n\n#' + queriedAPI + '\n\n', (err) => {
 // handle the query and run appropriate function. Controls for no argument provided
 switch (queriedAPI) {
 	case 'my-tweets':
-		retrieveTweets();
+		retrieveTweets(); 
 		break;
 	case 'spotify-this-song':
 		querySpotify(queryRequest);

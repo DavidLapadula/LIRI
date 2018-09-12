@@ -1,14 +1,30 @@
-# Week10-liriNode
-Week-10-Assignment for UofT Coding Bootcamp
-API keys exported from personal .env file to keys.js file
- 
+# Language Interpreter
+
+## Description
+This is a purely command line argument built with node that accepts user input, uses it to query various API's, and then displays a result.
+
+## Motivation
+This project was meant to become accustomed to Node and NPM. With the use of various packages I utilized javascript outside of a browser, which is intended to be an introduction to server-side development
+
+## Installation
+
+If you want to test this out for yourself, it is very easy! Just use these simple steps!
+
+1. Fork the repository and clone it to your local machine. 
+2. Make sure node is installed, create a '.env' file and supply your own 'Twitter API' and 'Spotify API' Key
+3. Open the terminal in our project directory and run the command 'npm install'
+4. Issue the commands listed below in the 'Functionality' and watch the data flow in!
+
+## Screenshots
+![](./images/nodeLiri.gif)
+  
 ## Technology
-Javascript (ES6) 
-Node.js (twitter, spotify and request NPM modules)
+* Javascript (ES6) 
+* Node.js
+
+
 ## Functionality
 Command Line Interface program that accepts parameters used to subsequently query API's
-
-_After Supplying personal API keys and setting in .env file_
  
 **Each command recieves a JSON object from the API and then displays selected information from it** 
  
@@ -27,7 +43,7 @@ node liri movie-this '<movie-name>'  queries the OMDB API. This will display
 * Rotten tomatoes rating
 * Country where movie was produced
 * Language the movie was made in
-* Plot summary 
+* Plot summary  
 * Actors featured in the movie
   
 ## Additions 
