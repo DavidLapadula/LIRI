@@ -1,10 +1,10 @@
 # Language Interpreter
 
 ## Description
-This is a purely command line argument built with node that accepts user input, uses it to query various API's, and then displays a result.
+This is a command line argument built with node that accepts user input, uses it to query various API's, and then displays a result.
 
 ## Motivation
-This project was meant to become accustomed to Node and NPM. With the use of various packages I utilized javascript outside of a browser, which is intended to be an introduction to server-side development
+This project was meant as an introduction to Node and NPM. The ability to run javascript outside of a browser is a popular trend in modern web development. 
 
 ## Installation
 
